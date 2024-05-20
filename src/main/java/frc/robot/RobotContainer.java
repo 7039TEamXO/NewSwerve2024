@@ -34,7 +34,7 @@ public class RobotContainer {
     private final int rotationAxis = PS4Controller.Axis.kRightX.value;
 
     /* Driver Buttons */
-    private final JoystickButton zeroGyro = new JoystickButton(driver, PS4Controller.Button.kTriangle.value);
+    private final JoystickButton zeroGyro = new JoystickButton(driver, PS4Controller.Button.kPS.value);
     private final JoystickButton robotCentric = new JoystickButton(driver, PS4Controller.Button.kL1.value);
     //private final JoystickButton zeroGyro = new JoystickButton(driver, XboxController.Button.kY.value);
     //private final JoystickButton robotCentric = new JoystickButton(driver, XboxController.Button.kLeftBumper.value);
