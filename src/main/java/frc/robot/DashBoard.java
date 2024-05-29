@@ -23,20 +23,21 @@ public class DashBoard {
     private static GenericEntry ampOffset = driver.add("amp offset", 0).withPosition(0, 3).withSize(3, 3)
             .getEntry();
 
-    private static SwerveModule[] swerveModules = {
-        new SwerveModule(0, Constants.Swerve.FrontLeftSwerveModule.constants),
-        new SwerveModule(1, Constants.Swerve.FrontRightSwerveModule.constants),
-        new SwerveModule(2, Constants.Swerve.BackLeftSwerveModule.constants),
-        new SwerveModule(3, Constants.Swerve.BackRightSwerveModule.constants)
-    };
+    // // TODO should not create a new instance 
+    // private static SwerveModule[] swerveModules = {
+    //     new SwerveModule(0, Constants.Swerve.FrontLeftSwerveModule.constants),
+    //     new SwerveModule(1, Constants.Swerve.FrontRightSwerveModule.constants),
+    //     new SwerveModule(2, Constants.Swerve.BackLeftSwerveModule.constants),
+    //     new SwerveModule(3, Constants.Swerve.BackRightSwerveModule.constants)
+    // };
 
 
 public static void init() {
 
-    data.addNumber("FrontLeftModule", () -> swerveModules[0].getCANcoder().getDegrees()).withPosition(0, 0).withSize(4, 3);
-    data.addNumber("FrontRightModule", () -> swerveModules[1].getCANcoder().getDegrees()).withPosition(4, 0).withSize(4, 3);
-    data.addNumber("BackLeftModule", () -> swerveModules[2].getCANcoder().getDegrees()).withPosition(8, 0).withSize(4, 3);
-    data.addNumber("BackRightModule", () -> swerveModules[3].getCANcoder().getDegrees()).withPosition(12, 0).withSize(4, 3);
+    // data.addNumber("FrontLeftModule", () -> swerveModules[0].getCANcoder().getDegrees()).withPosition(0, 0).withSize(4, 3);
+    // data.addNumber("FrontRightModule", () -> swerveModules[1].getCANcoder().getDegrees()).withPosition(4, 0).withSize(4, 3);
+    // data.addNumber("BackLeftModule", () -> swerveModules[2].getCANcoder().getDegrees()).withPosition(8, 0).withSize(4, 3);
+    // data.addNumber("BackRightModule", () -> swerveModules[3].getCANcoder().getDegrees()).withPosition(12, 0).withSize(4, 3);
 
 
 

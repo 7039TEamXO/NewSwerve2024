@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 import frc.robot.autos.*;
 import frc.robot.commands.*;
-import frc.robot.subsystems.*;
+import frc.robot.subsystems.swerve.Swerve;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -34,8 +34,8 @@ public class RobotContainer {
     private final int rotationAxis = PS4Controller.Axis.kRightX.value;
 
     /* Driver Buttons */
-    private final JoystickButton zeroGyro = new JoystickButton(driver, PS4Controller.Button.kPS.value);
-    private final JoystickButton robotCentric = new JoystickButton(driver, PS4Controller.Button.kL1.value);
+    private final JoystickButton psButton = new JoystickButton(driver, PS4Controller.Button.kPS.value);
+    private final JoystickButton l1Button = new JoystickButton(driver, PS4Controller.Button.kL1.value);
     //private final JoystickButton zeroGyro = new JoystickButton(driver, XboxController.Button.kY.value);
     //private final JoystickButton robotCentric = new JoystickButton(driver, XboxController.Button.kLeftBumper.value);
 
@@ -51,7 +51,7 @@ public class RobotContainer {
                 () -> -driver.getRawAxis(translationAxis), 
                 () -> -driver.getRawAxis(strafeAxis), 
                 () -> -driver.getRawAxis(rotationAxis), 
-                () -> robotCentric.getAsBoolean()
+                () -> l1Button.getAsBoolean()
             )
         );
 
@@ -67,7 +67,7 @@ public class RobotContainer {
      */
     private void configureButtonBindings() {
         /* Driver Buttons */
-        zeroGyro.onTrue(new InstantCommand(() -> s_Swerve.zeroHeading()));
+        psButton.onTrue(new InstantCommand(() -> s_Swerve.zeroHeading()));
     }
 
     /**
